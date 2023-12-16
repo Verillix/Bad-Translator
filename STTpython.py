@@ -1,5 +1,4 @@
 #import library
-from google_speech import Speech
 from googletrans import Translator
 from PyMultiDictionary import MultiDictionary
 import speech_recognition as sr
