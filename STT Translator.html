@@ -1,0 +1,16 @@
+<html>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <head> 
+        <title>Text/Spoken language translator</title>
+    </head>
+    <body>
+        <label for='text'>Text:</label>
+        <input type="text" id="text" name="text">
+        <py-script src = "STT%20python.py">
+        </py-script>
+        <button py-click="detectTextLang()" id='Button'>Translate!</button>
+        <p id='translatedTextOut'></p>
+    </body>
+
+</html>
