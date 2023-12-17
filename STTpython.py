@@ -92,4 +92,3 @@ def detectTextLang():
     print("Text: ",Text)
     print("Translation: ",translation.text)
     return()
-detectTextLang()
