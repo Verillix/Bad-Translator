@@ -7,19 +7,15 @@
     <body>
         <label for='text'>Text:</label>
         <input type="text" id="text" name="text">
-          <py-env>
-          - googletrans
-          - PyMultiDictionart
-          - speech_recognition
-          - Caribe
-          </py-env>
+          <py-config type="toml">
+            packages = ["googletrans", "PyMultiDictionary", "speed_recognition", "Caribe"]
+          </py-config>
         <py-script>
             from googletrans import Translator
             from PyMultiDictionary import MultiDictionary
             import speech_recognition as sr
             import Caribe as cb
         </py-script>
-        <script type ="py" src = "./STTpython.py" config="./pyscript.toml"></script>
         <button py-click="detectTextLang()" id='Button'>Translate!</button>
         <p id='translatedTextOut'></p>
     </body>
