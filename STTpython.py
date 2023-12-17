@@ -61,33 +61,9 @@ def detectTextLang():
     languages[39] = 'zh-cn'
     languageT = 1
     Text = input("text: ")
-    '''
-    for i in range(int(len(languages)/2)):
-        try:
-            translator.translate(Text, language = languages[languageT]).text
-            possibleLanguages.append(languages[languageT])
-            languageT = languageT + 2
-        except:
-            languageT = languageT + 2
-    for i in range(len(possibleLanguages)):
-        print(len(possibleLanguages))
-        print(possibleLanguages)
-        for j in range(len(Text.split())):
-            try:
-                dictionary.meaning(possibleLanguages[i],Text.split()[i])
-                print("accepted:", possibleLanguages[i])
-                possibleLanguages2.append(possibleLanguages[i])
-                break
-            except:
-                print("removed: ",possibleLanguages[i])
-                break
-    correctLanguage = possibleLanguages2[0] 
-    print(correctLanguage)
-    '''
     translation = translator.translate(Text)
     correctLanguage = translation.src
     typed = languages.index(correctLanguage) -1
-    print(correctLanguage)
     print("The language is:",languages[typed])
     print("Text: ",Text)
     print("Translation: ",translation.text)
